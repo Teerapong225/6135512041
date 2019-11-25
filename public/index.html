@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.3.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.3.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.3.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.3.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.3.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <script type="text/javascript">
+    <!--
+    function mouseMoving(e){
+      if( window.event){	
+        actual_x = document.body.scrollLeft+window.event.clientX;
+        actual_y = document.body.scrollTop+window.event.clientY;
+        }else{
+        actual_x = e.pageX;			
+        actual_y = e.pageY;
+        }	
+                              
+        actual_x = Math.abs((Math.round(actual_x/4)%256)-122)*2;
+        actual_y = Math.abs((Math.round(actual_y/4)%256)-122)*2;
+        green = Math.round(((255-actual_x) + (255-actual_y))/2);
+        body_elm = document.getElementsByTagName('body')[0].style;
+        body_elm.backgroundColor="rgb("+actual_y+","+green+","+actual_x+")";
+        }
+       
+        document.onmousemove = mouseMoving;
+    // -->
+    </script>
+  <body>
+      
+    <div class="container">
+      <div>
+          <form action="/action_page.php">
+            <fieldset>
+              
+              Name:<br>
+              <input type="text" placeholder="Name" id="name">
+              <br>
+              E-mail:<br>
+              <input type="text" placeholder="Email" id="email">
+          
+              <br>
+              Phone:<br>
+              <input type="text" placeholder="Phone" id="phone">
+              <br><br>
+              <button type="submit" class="btn waves-effect waves-light addContact">Add</button>
+            </fieldset>
+          </form>
+      </div>
+
+      <div id="contacts" class="row">
+        <!-- contact list items will be added here -->
+      </div>
+
+      <p id="status">Firebase SDK Loading&hellip;</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  
+</html>
